@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Demo.AspNetCore.Mvc.Http2 - Conditional Rendering</title>
+    <link href="~/css/site.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <h1 class="http1" asp-http2-class="http2">Conditional Rendering</h1>
+
+    <protocol include="HTTP/2">
+        <environment include="Development">
+            <script src="~/js/core-bundle.js" asp-append-version="true"></script>
+            <script src="~/js/page-bundle.js" asp-append-version="true"></script>
+        </environment>
+        <environment exclude="Development">
+            <script src="~/js/core-bundle.min.js" asp-append-version="true"></script>
+            <script src="~/js/page-bundle.min.js" asp-append-version="true"></script>
+        </environment>
+    </protocol>
+    <protocol exclude="HTTP/2">
+        <environment include="Development">
+            <script src="~/js/site-bundle.js" asp-append-version="true"></script>
+        </environment>
+        <environment exclude="Development">
+            <script src="~/js/site-bundle.min.js" asp-append-version="true"></script>
+        </environment>
+    </protocol>
+</body>
+</html>

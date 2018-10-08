@@ -1,0 +1,9 @@
+﻿.http1:after {
+    color: red;
+    content: " (H1)";
+}
+
+.http2:after {
+    color: red;
+    content: " (H2)";
+}
