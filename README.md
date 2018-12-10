@@ -1,6 +1,8 @@
 # Demo.AspNetCore.Mvc.Http2
 
-Sample application experimenting with HTTP/2 and protocol based content delivery.
+Sample application experimenting with HTTP/2 and protocol based content delivery. You can read more here:
+
+- [HTTP/2 and ASP.NET Core MVC - Protocol based content delivery](https://www.tpeczek.com/2018/10/http2-and-aspnet-core-mvc-protocol.html)
 
 ## Donating
 
